@@ -63,7 +63,7 @@ void TCPServer::join() {
 void TCPServer::threadFunc() {
     int sockfd;
 
-    std::cout << "Listen on: " << PORT << std::endl;
+    std::cout << "Listen on: " << port << std::endl;
     if ((sockfd = socket(AF_INET, SOCK_STREAM, 0)) == -1) {
         std::cout << "socket() => -1, errno=" << errno << std::endl;
         return;
@@ -78,7 +78,7 @@ void TCPServer::threadFunc() {
     struct sockaddr_in servaddr = {0, 0, 0, 0};
     servaddr.sin_family = AF_INET;
     servaddr.sin_addr.s_addr = INADDR_ANY;
-    servaddr.sin_port = htons(PORT);
+    servaddr.sin_port = htons(port);
 
     // binding to socket that will listen for new connections
     if (bind(sockfd, (const struct sockaddr*)&servaddr, sizeof(servaddr)) == -1) {

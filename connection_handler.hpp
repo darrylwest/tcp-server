@@ -14,6 +14,8 @@ private:
     void stop();
 
 public:
+    const size_t BUFFER_SIZE = 2048;
+
     explicit ConnectionHandler(int fd);
     ~ConnectionHandler();
 

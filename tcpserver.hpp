@@ -4,7 +4,6 @@
 
 class TCPServer {
 public:
-    static const int PORT = 1234;
 
     // starts server
     void start();
@@ -22,6 +21,8 @@ public:
 private:
     // event file descriptor - it will be used to tell server to stop
     int efd;
+
+    int port = 1234;
 
     // server thread
     std::thread m_thread;

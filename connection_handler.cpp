@@ -35,10 +35,10 @@ void ConnectionHandler::threadFunc() {
 }
 
 std::string ConnectionHandler::readMessage() {
-    char  msg[1024];
-    bzero(msg, 1024);   // buffor with 1024 length which is filled with NULL character
+    char  msg[BUFFER_SIZE];
+    bzero(msg, BUFFER_SIZE);
     
-    int readBytes = recv(this->fd, msg, 1024, 0);
+    int readBytes = recv(this->fd, msg, BUFFER_SIZE, 0);
     if (readBytes < 1) {
         std::cout << "Error in readMessage, readBytes: " << readBytes << std::endl;
         return "";
