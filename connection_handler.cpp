@@ -2,9 +2,9 @@
 #include <cassert>
 #include <sys/socket.h>
 #include <cstring>
-#include <errno.h>
+#include <cerrno>
 #include <iostream>
-#include <pthread.h>
+#include <thread>
 
 #include "connection_handler.hpp"
 
