@@ -10,8 +10,8 @@
 
 #include <cstdlib>
 #include <iostream>
-#include <boost/bind/bind.hpp>
 #include <boost/asio.hpp>
+#include <boost/bind/bind.hpp>
 
 using boost::asio::ip::tcp;
 
