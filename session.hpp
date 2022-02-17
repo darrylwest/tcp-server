@@ -33,6 +33,7 @@ private:
           boost::bind(&session::handle_write, this,
             boost::asio::placeholders::error));
     } else {
+      std::cout << "delete this session" << std::endl;
       delete this;
     }
   }
@@ -44,6 +45,7 @@ private:
             boost::asio::placeholders::error,
             boost::asio::placeholders::bytes_transferred));
     } else {
+      std::cout << "delete this session (on error 2)" << std::endl;
       delete this;
     }
   }
