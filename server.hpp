@@ -28,6 +28,7 @@ private:
   }
 
   void handle_accept(session* new_session, const boost::system::error_code& error) {
+    std::cout << "start new session" << std::endl;
     if (!error) {
       new_session->start();
     } else {
