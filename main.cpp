@@ -11,7 +11,7 @@ using boost::asio::ip::tcp;
 int main(int argc, char* argv[]) {
   try {
     // parse command args for Config
-    int port = 2000;
+    int port = 22000;
 
     boost::asio::io_context io_context;
 
