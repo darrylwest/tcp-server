@@ -8,6 +8,9 @@
 
 ```
 
-A boost multi-threaded TCP server.
+A boost multi-threaded TCP (echo) server.  Kind of clunky to use.  probably better with sockpp or cpp-httplib
 
-###### darryl.west | 2022.02.16
+Use telenet machine port to test.
+
+###### darryl.west | 2024.12.02
+
